@@ -2,13 +2,13 @@
 <h3 align="center">A passionate 💻 AI/ML Engineer | Generative AI • NLP • LLMs • AI Agents</h3>
 🚀 What I Do 👇🏻
 
-- 🧠 Build & optimize LLMs, RAG systems, and advanced prompt engineering workflows**
+- 🧠 Build & optimize LLMs, RAG systems, and advanced prompt engineering workflows
 
 - 📈 Improve system accuracy, response quality, and latency
 
-- 🤖 Develop intelligent AI agents, multi-step reasoning systems, and automation pipelines**
+- 🤖 Develop intelligent AI agents, multi-step reasoning systems, and automation pipelines
 
-- ⚙️ Architect end-to-end AI project pipelines (data → models → deployment)**
+- ⚙️ Architect end-to-end AI project pipelines (data → models → deployment)
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
