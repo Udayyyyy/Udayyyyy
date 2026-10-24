@@ -1,6 +1,6 @@
-<img align="right" src="./assets/abstract-form.svg" width="128" height="128" alt="" />
-
 # Uday Radadiya
+
+<img align="right" src="./assets/abstract-form.svg" width="112" height="112" alt="" />
 
 **AI/ML & Applied Research**
 
