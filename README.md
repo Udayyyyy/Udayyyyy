@@ -1,12 +1,12 @@
 <picture>
+  <source media="(max-width: 600px) and (prefers-reduced-motion: no-preference)" srcset="./assets/profile-header-mobile.gif">
+  <source media="(prefers-reduced-motion: no-preference)" srcset="./assets/profile-header.gif">
   <source media="(max-width: 600px)" srcset="./assets/profile-header-mobile.svg">
-  <img src="./assets/profile-header.svg" width="100%" alt="Uday Radadiya — agent evaluation, RL environments, and edge cases">
+  <img src="./assets/profile-header.svg" width="100%" alt="Uday Radadiya — benchmarks, RL environments, and verifiers">
 </picture>
 
-**I test agents. Then I test the tests.**
+**I engineer rigorous evaluations and verifiable rewards for AI agents.**
 
-Working with **Snorkel AI** (contract, multiple projects) and **Abundant** (YC-backed).
-
-`Agent evaluation` `RL environments` `Reward checks`
+Currently with **Snorkel AI** (contract, multiple projects) and **Abundant** (YC-backed).
 
 **[Portfolio ↗](https://udayyyyy.github.io/)** · [LinkedIn](https://www.linkedin.com/in/uday-radadiya/) · [Say hello](mailto:udayradadiya65@gmail.com)

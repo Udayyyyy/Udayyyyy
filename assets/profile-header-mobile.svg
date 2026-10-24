@@ -1,8 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="480" height="160" viewBox="0 0 480 160" fill="none">
-  <title>Uday Radadiya</title>
-  <desc>Agent evaluation, RL environments, and edge cases.</desc>
-  <rect width="480" height="160" rx="14" fill="#171B21"/>
-  <text x="23" y="82" fill="#F39477" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="39">&gt;</text>
-  <text x="60" y="82" fill="#F5F1E9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-size="43" font-weight="650" letter-spacing="-1.4">Uday Radadiya</text>
-  <text x="26" y="122" fill="#B9BEC6" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="19">evals / environments / edge cases</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="230" viewBox="0 0 560 230">
+<title>Uday Radadiya — Applied AI and evaluation</title>
+<desc>Benchmarks, RL environments, and verifiers. A signal passes from a task through an agent to a check.</desc>
+<rect x="0" y="0" width="560" height="230" rx="6" fill="#F2F0E9"/>
+<text x="32" y="40" font-family="Menlo, Consolas, monospace" font-size="16" font-weight="400" letter-spacing="0" text-anchor="start" fill="#71756F">APPLIED AI / EVALUATION</text>
+<text x="27" y="118" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="700" letter-spacing="-2.2" text-anchor="start" fill="#191D20">Uday Radadiya</text>
+<text x="32" y="157" font-family="Menlo, Consolas, monospace" font-size="17" font-weight="400" letter-spacing="0" text-anchor="start" fill="#71756F">BENCHMARKS / RL / VERIFIERS</text>
+<path d="M32 195H528" fill="none" stroke="#C7C9C0" stroke-width="1.6"/>
+<circle cx="32" cy="195" r="4.5" fill="#F2F0E9" stroke="#71756F" stroke-width="1.4"/>
+<circle cx="280.0" cy="195" r="4.5" fill="#F2F0E9" stroke="#71756F" stroke-width="1.4"/>
+<circle cx="528" cy="195" r="4.5" fill="#F2F0E9" stroke="#71756F" stroke-width="1.4"/>
+<circle cx="528" cy="195" r="9" fill="#EBCBBE"/>
+<circle cx="528" cy="195" r="4.2" fill="#C95036"/>
 </svg>
