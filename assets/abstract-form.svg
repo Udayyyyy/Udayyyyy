@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200" fill="none">
+  <desc>Original abstract contour study. The balance of a rounded mass and an off-centre opening is inspired by Barbara Hepworth's Pierced Hemisphere I, seen in The Hepworth Wakefield collection.</desc>
+  <path d="M113 27C151 30 176 61 178 98C180 137 153 169 115 174L103 162C136 157 158 132 159 101C161 67 143 39 113 27Z" fill="#d9cede" stroke="#8a7598" stroke-width="1.2"/>
+  <path fill-rule="evenodd" d="M92 25C130 20 159 49 163 90C168 134 143 169 105 174C67 179 34 151 31 113C27 73 51 32 92 25ZM88 69C73 69 62 83 64 99C66 114 78 123 92 120C106 117 115 103 111 88C108 76 99 68 88 69Z" fill="#f0eaf4" stroke="#705a80" stroke-width="1.6"/>
+  <path d="M92 69C104 73 109 85 106 98C103 111 94 119 82 119" stroke="#b9a8c4" stroke-width="1.1" stroke-linecap="round"/>
+</svg>

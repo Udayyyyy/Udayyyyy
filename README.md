@@ -1,73 +1,46 @@
-<h1 align="center">Hi 👋, I'm Uday</h1>
-<h3 align="center">💻 AI/ML Engineer | Generative AI • NLP • LLMs • AI Agents</h3>
+<img align="right" src="./assets/abstract-form.svg" width="128" height="128" alt="" />
 
-<br>
+# Uday Radadiya
 
-## 🚀 What I Do 👇🏻
+**AI/ML & Applied Research**
 
-- 🧠 Build & optimize LLMs, RAG systems, and advanced prompt engineering workflows  
-- 📈 Improve system accuracy, response quality, and latency  
-- 🤖 Develop intelligent AI agents, multi-step reasoning systems, and automation pipelines  
-- ⚙️ Architect end-to-end AI project pipelines (data → models → deployment)  
+I build evaluation systems and reproducible RL environments for AI agents.
 
-<br>
+[Portfolio](https://udayyyyy.github.io/) · [LinkedIn](https://www.linkedin.com/in/uday-radadiya/) · [Email](mailto:udayradadiya65@gmail.com)
 
-## 📫 Connect With Me
+<br clear="right" />
 
-- 💼 LinkedIn: <a href="https://www.linkedin.com/in/uday-radadiya/" target="_blank">Uday Radadiya</a>  
-- 📧 Email: <a href="mailto:udayradadiya65@gmail.com">udayradadiya65@gmail.com</a>  
+## Current work
 
-<br>
+- **Snorkel AI** · Contract · Present<br>
+  Contract work across multiple projects in agent evaluation and RL environments.
 
-<h3 align="center">🛠️ Languages & Tools</h3>
+- **Abundant** · YC-backed · Applied Research Engineer · Jan 2026–Present<br>
+  Building reproducible coding-agent tasks, benchmark datasets, and hybrid grading pipelines to evaluate reasoning, tool use, and code execution.
 
-<p align="center">
-  <a href="https://aws.amazon.com" target="_blank" rel="noreferrer">
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" width="40" height="40"/>
-  </a>
-  <a href="https://www.djangoproject.com/" target="_blank" rel="noreferrer">
-    <img src="https://cdn.worldvectorlogo.com/logos/django.svg" width="40" height="40"/>
-  </a>
-  <a href="https://www.docker.com/" target="_blank" rel="noreferrer">
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg" width="40" height="40"/>
-  </a>
-  <a href="https://git-scm.com/" target="_blank" rel="noreferrer">
-    <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" width="40" height="40"/>
-  </a>
-  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer">
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" width="40" height="40"/>
-  </a>
-  <a href="https://www.linux.org/" target="_blank" rel="noreferrer">
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" width="40" height="40"/>
-  </a>
-  <a href="https://www.mongodb.com/" target="_blank" rel="noreferrer">
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" width="40" height="40"/>
-  </a>
-  <a href="https://www.mysql.com/" target="_blank" rel="noreferrer">
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" width="40" height="40"/>
-  </a>
-  <a href="https://pandas.pydata.org/" target="_blank" rel="noreferrer">
-    <img src="https://raw.githubusercontent.com/devicons/devicon/2ae2a900d2f041da66e950e4d48052658d850630/icons/pandas/pandas-original.svg" width="40" height="40"/>
-  </a>
-  <a href="https://www.postgresql.org" target="_blank" rel="noreferrer">
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg" width="40" height="40"/>
-  </a>
-  <a href="https://postman.com" target="_blank" rel="noreferrer">
-    <img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" width="40" height="40"/>
-  </a>
-  <a href="https://www.python.org" target="_blank" rel="noreferrer">
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" width="40" height="40"/>
-  </a>
-  <a href="https://pytorch.org/" target="_blank" rel="noreferrer">
-    <img src="https://www.vectorlogo.zone/logos/pytorch/pytorch-icon.svg" width="40" height="40"/>
-  </a>
-  <a href="https://redis.io" target="_blank" rel="noreferrer">
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/redis/redis-original-wordmark.svg" width="40" height="40"/>
-  </a>
-  <a href="https://seaborn.pydata.org/" target="_blank" rel="noreferrer">
-    <img src="https://seaborn.pydata.org/_images/logo-mark-lightbg.svg" width="40" height="40"/>
-  </a>
-  <a href="https://www.tensorflow.org" target="_blank" rel="noreferrer">
-    <img src="https://www.vectorlogo.zone/logos/tensorflow/tensorflow-icon.svg" width="40" height="40"/>
-  </a>
-</p>
+## What I work on
+
+- **Agent evaluation** — meaningful tasks, reproducible benchmarks, and trajectory analysis to understand where agents fail.
+- **RL environments & verifiers** — Docker-based environments, outcome-based grading, reward validation, and checks against grading shortcuts.
+- **Applied AI** — RAG pipelines, conversational systems, computer vision, and model evaluation.
+
+## Selected project
+
+### [Fraud detection MLOps ↗](https://github.com/Udayyyyy/fraud-detection-mlops)
+
+A local ML engineering case study with chronological splits, leakage checks, probability calibration, cost-based threshold analysis, drift simulations, and a Streamlit demo.
+
+`Python` `LightGBM` `scikit-learn` `Streamlit`
+
+## Tools I use
+
+`Python` `PyTorch` `FastAPI` `Docker` `GitHub Actions` `LangChain` `LangGraph` `PostgreSQL` `AWS`
+
+<details>
+<summary>Earlier work & education</summary>
+
+- **DRC Systems** · Sr. AI/ML Engineer · Mar–Dec 2025 — enterprise RAG, computer vision, and LLM evaluation workflows.
+- **Intralign.ai** · AI Engineer · Jan 2024–Feb 2025 — Rasa assistants and multi-step agent workflows with LangChain and FlowiseAI.
+- **B.Tech, Computer Science (AI/ML)** · L.J Institute of Engineering and Technology · 2021–2024.
+
+</details>
