@@ -1,6 +1,6 @@
 <picture>
-  <source media="(max-width: 600px) and (prefers-reduced-motion: no-preference)" srcset="./assets/profile-header-mobile.gif">
-  <source media="(prefers-reduced-motion: no-preference)" srcset="./assets/profile-header.gif">
+  <source media="(max-width: 600px) and (prefers-reduced-motion: no-preference)" srcset="./assets/profile-header-mobile.gif?v=2">
+  <source media="(prefers-reduced-motion: no-preference)" srcset="./assets/profile-header.gif?v=2">
   <source media="(max-width: 600px)" srcset="./assets/profile-header-mobile.svg">
   <img src="./assets/profile-header.svg" width="100%" alt="Uday Radadiya — benchmarks, RL environments, and verifiers">
 </picture>
