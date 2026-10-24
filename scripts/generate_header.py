@@ -156,6 +156,16 @@ def generate(mobile=False):
     (ASSETS/f"{name}.svg").write_text(svg(spec))
     samples = list(positions())
     palette = raster(spec, 0).quantize(colors=128, method=Image.Quantize.MEDIANCUT)
+    # Reserve the small accent's colors so text antialiasing cannot displace them.
+    colors = palette.getpalette()
+    paper = tuple(bytes.fromhex(PAPER[1:]))
+    for offset, color in [(128, ACCENT), (144, HALO)]:
+        rgb = tuple(bytes.fromhex(color[1:]))
+        for step in range(16):
+            mix = step / 15
+            value = [round(a * (1 - mix) + b * mix) for a, b in zip(rgb, paper)]
+            colors[(offset + step) * 3:(offset + step + 1) * 3] = value
+    palette.putpalette(colors)
     frames = [raster(spec, position).quantize(palette=palette, dither=Image.Dither.NONE)
               for position in samples]
     frames[0].save(ASSETS/f"{name}.gif", save_all=True, append_images=frames[1:],
