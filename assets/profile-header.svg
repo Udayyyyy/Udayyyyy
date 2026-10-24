@@ -1,17 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1120" height="244" viewBox="0 0 1120 244">
 <title>Uday Radadiya — Applied AI and evaluation</title>
 <desc>Benchmarks, RL environments, and verifiers. A signal passes from a task through an agent to a check.</desc>
-<rect x="0" y="0" width="1120" height="244" rx="6" fill="#F2F0E9"/>
-<text x="34" y="48" font-family="Menlo, Consolas, monospace" font-size="16" font-weight="400" letter-spacing="0" text-anchor="start" fill="#71756F">APPLIED AI / EVALUATION</text>
-<text x="28" y="132" font-family="Arial, Helvetica, sans-serif" font-size="74" font-weight="700" letter-spacing="-3.0" text-anchor="start" fill="#191D20">Uday Radadiya</text>
-<text x="34" y="188" font-family="Menlo, Consolas, monospace" font-size="17" font-weight="400" letter-spacing="0" text-anchor="start" fill="#71756F">BENCHMARKS / ENVIRONMENTS / VERIFIERS</text>
-<text x="704" y="86" font-family="Menlo, Consolas, monospace" font-size="17" font-weight="400" letter-spacing="0" text-anchor="middle" fill="#71756F">task</text>
-<text x="880" y="86" font-family="Menlo, Consolas, monospace" font-size="17" font-weight="400" letter-spacing="0" text-anchor="middle" fill="#71756F">agent</text>
-<text x="1056" y="86" font-family="Menlo, Consolas, monospace" font-size="17" font-weight="400" letter-spacing="0" text-anchor="middle" fill="#71756F">check</text>
-<path d="M704 122H1056" fill="none" stroke="#C7C9C0" stroke-width="1.6"/>
-<circle cx="704" cy="122" r="4.5" fill="#F2F0E9" stroke="#71756F" stroke-width="1.4"/>
-<circle cx="880.0" cy="122" r="4.5" fill="#F2F0E9" stroke="#71756F" stroke-width="1.4"/>
-<circle cx="1056" cy="122" r="4.5" fill="#F2F0E9" stroke="#71756F" stroke-width="1.4"/>
-<circle cx="1056" cy="122" r="9" fill="#EBCBBE"/>
-<circle cx="1056" cy="122" r="4.2" fill="#C95036"/>
+<rect x="0" y="0" width="1120" height="244" rx="6" fill="#0D1117"/>
+<text x="34" y="48" font-family="Menlo, Consolas, monospace" font-size="16" font-weight="400" letter-spacing="0" text-anchor="start" fill="#8B949E">APPLIED AI / EVALUATION</text>
+<text x="28" y="132" font-family="Arial, Helvetica, sans-serif" font-size="74" font-weight="700" letter-spacing="-3.0" text-anchor="start" fill="#F0F3F6">Uday Radadiya</text>
+<text x="34" y="188" font-family="Menlo, Consolas, monospace" font-size="17" font-weight="400" letter-spacing="0" text-anchor="start" fill="#8B949E">BENCHMARKS / ENVIRONMENTS / VERIFIERS</text>
+<text x="704" y="86" font-family="Menlo, Consolas, monospace" font-size="17" font-weight="400" letter-spacing="0" text-anchor="middle" fill="#8B949E">task</text>
+<text x="880" y="86" font-family="Menlo, Consolas, monospace" font-size="17" font-weight="400" letter-spacing="0" text-anchor="middle" fill="#8B949E">agent</text>
+<text x="1056" y="86" font-family="Menlo, Consolas, monospace" font-size="17" font-weight="400" letter-spacing="0" text-anchor="middle" fill="#8B949E">check</text>
+<path d="M704 122H1056" fill="none" stroke="#39424D" stroke-width="1.6"/>
+<circle cx="704" cy="122" r="4.5" fill="#0D1117" stroke="#8B949E" stroke-width="1.4"/>
+<circle cx="880.0" cy="122" r="4.5" fill="#0D1117" stroke="#8B949E" stroke-width="1.4"/>
+<circle cx="1056" cy="122" r="4.5" fill="#0D1117" stroke="#8B949E" stroke-width="1.4"/>
+<path d="M1012 122H1056" fill="none" stroke="#493731" stroke-width="3.2"/>
+<path d="M1031 122H1056" fill="none" stroke="#925a49" stroke-width="3.2"/>
+<circle cx="1056" cy="122" r="12" fill="#3f2d2b"/>
+<circle cx="1056" cy="122" r="6.2" fill="#f39073"/>
 </svg>

@@ -14,12 +14,14 @@ from PIL import Image, ImageDraw, ImageFont
 
 ROOT = Path(__file__).resolve().parents[1]
 ASSETS = ROOT / "assets"
-PAPER = "#F2F0E9"
-INK = "#191D20"
-MUTED = "#71756F"
-RULE = "#C7C9C0"
-ACCENT = "#C95036"
-HALO = "#EBCBBE"
+BACKGROUND = "#0D1117"
+INK = "#F0F3F6"
+MUTED = "#8B949E"
+RULE = "#39424D"
+ACCENT = "#F39073"
+HALO = "#3F2D2B"
+TRAIL = "#925A49"
+TRAIL_FAINT = "#493731"
 SCALE = 2
 
 
@@ -61,19 +63,29 @@ def layout(mobile=False):
     }
 
 
-def primitives(spec, progress):
+def fade(color, opacity):
+    foreground = bytes.fromhex(color[1:])
+    background = bytes.fromhex(BACKGROUND[1:])
+    return "#" + "".join(f"{round(a * opacity + b * (1-opacity)):02x}"
+                         for a, b in zip(foreground, background))
+
+
+def primitives(spec, progress, opacity=1):
     width, height = spec["size"]
     start, end, y = spec["axis"]
-    shapes = [("rect", (0, 0, width, height, 6, PAPER))]
+    shapes = [("rect", (0, 0, width, height, 6, BACKGROUND))]
     shapes += [("text", item) for item in spec["texts"]]
     shapes += [("text_center", (x, 86, label, 17, MUTED, "mono", 0))
                for x, label in spec["labels"]]
     shapes.append(("line", (start, y, end, y, RULE, 1.6)))
     for x in [start, (start + end) / 2, end]:
-        shapes.append(("circle", (x, y, 4.5, PAPER, MUTED, 1.4)))
+        shapes.append(("circle", (x, y, 4.5, BACKGROUND, MUTED, 1.4)))
     x = start + (end - start) * progress
-    shapes.append(("circle", (x, y, 9, HALO, None, 0)))
-    shapes.append(("circle", (x, y, 4.2, ACCENT, None, 0)))
+    if opacity > 0:
+        for length, color in [(44, TRAIL_FAINT), (25, TRAIL)]:
+            shapes.append(("line", (max(start, x-length), y, x, y, fade(color, opacity), 3.2)))
+        shapes.append(("circle", (x, y, 12, fade(HALO, opacity), None, 0)))
+        shapes.append(("circle", (x, y, 6.2, fade(ACCENT, opacity), None, 0)))
     return shapes
 
 
@@ -103,11 +115,11 @@ def svg(spec, progress=1):
     return "\n".join(out) + "\n"
 
 
-def raster(spec, progress):
+def raster(spec, progress, opacity=1):
     width, height = spec["size"]
-    image = Image.new("RGB", (width * SCALE, height * SCALE), PAPER)
+    image = Image.new("RGB", (width * SCALE, height * SCALE), BACKGROUND)
     draw = ImageDraw.Draw(image)
-    for kind, values in primitives(spec, progress):
+    for kind, values in primitives(spec, progress, opacity):
         if kind == "rect":
             x, y, w, h, r, fill = values
             draw.rounded_rectangle((x*SCALE, y*SCALE, w*SCALE, h*SCALE), radius=r*SCALE, fill=fill)
@@ -132,21 +144,22 @@ def raster(spec, progress):
 
 
 def positions():
-    # Pause at each stage; all movement is limited to the small signal marker.
+    # Pause at each stage, then fade out before resetting to the first stage.
     for frame in range(80):
         phase = frame / 79
+        opacity = min(1, phase / 0.08, (1-phase) / 0.08)
         if phase < 0.12:
-            yield 0
+            yield 0, opacity
         elif phase < 0.44:
             t = (phase - 0.12) / 0.32
-            yield 0.25 * (1 - math.cos(t * math.pi))
+            yield 0.25 * (1 - math.cos(t * math.pi)), opacity
         elif phase < 0.56:
-            yield 0.5
+            yield 0.5, opacity
         elif phase < 0.88:
             t = (phase - 0.56) / 0.32
-            yield 0.5 + 0.25 * (1 - math.cos(t * math.pi))
+            yield 0.5 + 0.25 * (1 - math.cos(t * math.pi)), opacity
         else:
-            yield 1
+            yield 1, opacity
 
 
 def generate(mobile=False):
@@ -158,16 +171,21 @@ def generate(mobile=False):
     palette = raster(spec, 0).quantize(colors=128, method=Image.Quantize.MEDIANCUT)
     # Reserve the small accent's colors so text antialiasing cannot displace them.
     colors = palette.getpalette()
-    paper = tuple(bytes.fromhex(PAPER[1:]))
-    for offset, color in [(128, ACCENT), (144, HALO)]:
+    background = tuple(bytes.fromhex(BACKGROUND[1:]))
+    for offset, color in [(128, ACCENT), (144, HALO), (160, TRAIL), (176, TRAIL_FAINT)]:
         rgb = tuple(bytes.fromhex(color[1:]))
         for step in range(16):
             mix = step / 15
-            value = [round(a * (1 - mix) + b * mix) for a, b in zip(rgb, paper)]
+            value = [round(a * (1 - mix) + b * mix) for a, b in zip(rgb, background)]
             colors[(offset + step) * 3:(offset + step + 1) * 3] = value
     palette.putpalette(colors)
-    frames = [raster(spec, position).quantize(palette=palette, dither=Image.Dither.NONE)
-              for position in samples]
+    frames = [raster(spec, position, opacity).quantize(palette=palette, dither=Image.Dither.NONE)
+              for position, opacity in samples]
+    # Keep the large flat background exact after GIF palette quantization.
+    background_index = frames[0].getpixel((0, 0))
+    colors[background_index * 3:(background_index + 1) * 3] = background
+    for frame in frames:
+        frame.putpalette(colors)
     frames[0].save(ASSETS/f"{name}.gif", save_all=True, append_images=frames[1:],
                    duration=75, loop=0, optimize=True, disposal=1)
     raster(spec, 1).save(ROOT.parent/f"{name}-preview.png")
